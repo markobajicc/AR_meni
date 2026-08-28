@@ -37,3 +37,6 @@ next-env.d.ts
 
 # superseded/backup 3D model assets (not referenced by app code)
 public/models/**/*1.glb
+
+.vercel
+.env*

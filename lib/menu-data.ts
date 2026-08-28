@@ -10,6 +10,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+const BLOB_BASE = "https://i1ehs9v03p6bk6vf.public.blob.vercel-storage.com/models";
+
 export type Category = {
   id: string;
   label: string;
@@ -217,8 +219,8 @@ export const items: MenuItem[] = [
       "Placeholder model za proveru AR/3D flow-a end-to-end — zameniti pravim skenom jela kad photogrammetry modeli budu gotovi.",
     price: 0,
     model3d: {
-      glbUrl: "/models/test-3d-demo/model.glb",
-      usdzUrl: "/models/test-3d-demo/model.usdz",
+      glbUrl: `${BLOB_BASE}/test-3d-demo/model.glb`,
+      usdzUrl: `${BLOB_BASE}/test-3d-demo/model.usdz`,
       posterUrl: "/models/test-3d-demo/poster.svg",
     },
   },
@@ -230,8 +232,8 @@ export const items: MenuItem[] = [
       "Ažurirani photogrammetry sken jela, sada sa USDZ fajlom — Quick Look na iPhone-u, Scene Viewer/WebXR na Android-u i 3D rotacija svuda.",
     price: 0,
     model3d: {
-      glbUrl: "/models/procija1/model.glb",
-      usdzUrl: "/models/procija1/model.usdz",
+      glbUrl: `${BLOB_BASE}/procija1/model.glb`,
+      usdzUrl: `${BLOB_BASE}/procija1/model.usdz`,
       posterUrl: "/models/procija1/poster.svg",
     },
   },
@@ -243,7 +245,7 @@ export const items: MenuItem[] = [
       "Veći test model bez USDZ — namerno velik fajl da se vidi kako se ponaša učitavanje pre nego što odlučimo koliko treba da se kompresuju pravi skenovi.",
     price: 0,
     model3d: {
-      glbUrl: "/models/fast-food/model.glb",
+      glbUrl: `${BLOB_BASE}/fast-food/model.glb`,
       posterUrl: "/models/fast-food/poster.svg",
     },
   },
