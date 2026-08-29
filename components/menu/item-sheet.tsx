@@ -48,15 +48,16 @@ export function ItemSheet({
             transition={{ type: "spring", damping: 32, stiffness: 320 }}
             className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[88vh] w-full max-w-md overflow-y-auto rounded-t-[2rem] border-t border-border bg-background p-5 pb-8"
           >
-            <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-muted" />
-
-            <button
-              onClick={onClose}
-              className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground"
-              aria-label="Zatvori"
-            >
-              <X className="h-4 w-4" />
-            </button>
+            <div className="relative mb-4 flex items-center justify-center">
+              <div className="h-1.5 w-10 rounded-full bg-muted" />
+              <button
+                onClick={onClose}
+                className="absolute right-0 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground"
+                aria-label="Zatvori"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
 
             {item!.model3d ? (
               <Dish3DViewer model3d={item!.model3d} name={item!.name} />
