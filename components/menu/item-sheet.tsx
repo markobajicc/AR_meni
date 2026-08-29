@@ -48,28 +48,29 @@ export function ItemSheet({
             transition={{ type: "spring", damping: 32, stiffness: 320 }}
             className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[88vh] w-full max-w-md overflow-y-auto rounded-t-[2rem] border-t border-border bg-background p-5 pb-8"
           >
-            <div className="relative mb-4 flex items-center justify-center">
-              <div className="h-1.5 w-10 rounded-full bg-muted" />
+            <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-muted" />
+
+            <div className="relative">
+              {item!.model3d ? (
+                <Dish3DViewer model3d={item!.model3d} name={item!.name} />
+              ) : (
+                <div className="relative">
+                  <DishThumb icon={category!.icon} size="lg" />
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-background/80 px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
+                    <Sparkles className="h-3.5 w-3.5 text-ember-400" />
+                    3D / AR prikaz — uskoro
+                  </span>
+                </div>
+              )}
+
               <button
                 onClick={onClose}
-                className="absolute right-0 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground"
+                className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 text-muted-foreground backdrop-blur"
                 aria-label="Zatvori"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
-
-            {item!.model3d ? (
-              <Dish3DViewer model3d={item!.model3d} name={item!.name} />
-            ) : (
-              <div className="relative">
-                <DishThumb icon={category!.icon} size="lg" />
-                <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-background/80 px-3 py-1.5 text-xs text-muted-foreground backdrop-blur">
-                  <Sparkles className="h-3.5 w-3.5 text-ember-400" />
-                  3D / AR prikaz — uskoro
-                </span>
-              </div>
-            )}
 
             <p className="mt-5 text-xs uppercase tracking-widest text-muted-foreground">
               {category!.label}
