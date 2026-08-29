@@ -52,7 +52,7 @@ export function ItemSheet({
 
             <button
               onClick={onClose}
-              className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground"
+              className="absolute right-5 top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground"
               aria-label="Zatvori"
             >
               <X className="h-4 w-4" />
