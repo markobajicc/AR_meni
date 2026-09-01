@@ -1,12 +1,9 @@
 import {
   Beef,
   Box,
-  Cake,
   Fish,
   Salad,
-  Soup,
   UtensilsCrossed,
-  Wine,
   type LucideIcon,
 } from "lucide-react";
 
@@ -36,12 +33,9 @@ export type MenuItem = {
 
 export const categories: Category[] = [
   { id: "predjela", label: "Predjela", icon: Salad },
-  { id: "supe", label: "Supe i čorbe", icon: Soup },
   { id: "rostilj", label: "Roštilj", icon: Beef },
   { id: "riba", label: "Riba", icon: Fish },
   { id: "testenine", label: "Testenine", icon: UtensilsCrossed },
-  { id: "deserti", label: "Deserti", icon: Cake },
-  { id: "pica", label: "Pića", icon: Wine },
   { id: "test", label: "Test (demo)", icon: Box },
 ];
 
@@ -68,29 +62,6 @@ export const items: MenuItem[] = [
     description: "Pečeni hleb, sveži paradajz, bosiljak, maslinovo ulje.",
     price: 490,
     tags: ["vegan"],
-  },
-  {
-    id: "riblja-corba",
-    categoryId: "supe",
-    name: "Riblja čorba",
-    description: "Domaća, sa svežim povrćem i paprikom.",
-    price: 590,
-    tags: ["preporuka"],
-  },
-  {
-    id: "pileca-supa",
-    categoryId: "supe",
-    name: "Pileća supa",
-    description: "Kuvana na kostima, sa domaćim rezancima.",
-    price: 450,
-  },
-  {
-    id: "gulas",
-    categoryId: "supe",
-    name: "Gulaš čorba",
-    description: "Gusta čorba od junećeg mesa i paprike.",
-    price: 550,
-    tags: ["ljuto"],
   },
   {
     id: "mesano-meso",
@@ -166,50 +137,6 @@ export const items: MenuItem[] = [
     description: "Ljuti paradajz sos, beli luk, bosiljak.",
     price: 850,
     tags: ["ljuto", "vegan"],
-  },
-  {
-    id: "cokoladna-torta",
-    categoryId: "deserti",
-    name: "Čokoladna torta",
-    description: "Tamna čokolada, malina, sladoled od vanile.",
-    price: 590,
-    tags: ["preporuka"],
-  },
-  {
-    id: "tiramisu",
-    categoryId: "deserti",
-    name: "Tiramisu",
-    description: "Domaći, sa espresom i mascarpone kremom.",
-    price: 550,
-  },
-  {
-    id: "palacinke",
-    categoryId: "deserti",
-    name: "Palačinke sa orasima",
-    description: "Tri palačinke, orah, čokoladni preliv.",
-    price: 490,
-  },
-  {
-    id: "domaca-limunada",
-    categoryId: "pica",
-    name: "Domaća limunada",
-    description: "Sveže ceđena, nana, med.",
-    price: 350,
-    tags: ["vegan"],
-  },
-  {
-    id: "kupus-vino",
-    categoryId: "pica",
-    name: "Kućno crno vino",
-    description: "Čaša 0.2l, domaća berba.",
-    price: 390,
-  },
-  {
-    id: "craft-pivo",
-    categoryId: "pica",
-    name: "Craft pivo 0.33l",
-    description: "Izbor lokalnih pivara, rotira sezonski.",
-    price: 420,
   },
   {
     id: "test-3d-demo",

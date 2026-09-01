@@ -72,9 +72,9 @@ export default function MenuPage() {
                 Roštilj &amp; vino
               </p>
             </div>
-            <span className="rounded-full border border-border px-2.5 py-1 text-xs text-muted-foreground">
+            {/* <span className="rounded-full border border-border px-2.5 py-1 text-xs text-muted-foreground">
               Sto 4
-            </span>
+            </span> */}
           </div>
 
           <CategoryTabs
